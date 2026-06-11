@@ -1,0 +1,1 @@
+$data modify storage pipes:grid cache.display.click_event.command set value "trigger pipes.operation set $(tile_index)"

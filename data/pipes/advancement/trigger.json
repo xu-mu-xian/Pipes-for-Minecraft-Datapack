@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "rotate": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "pipes.trigger": {
+                    "min": 1
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "pipes.trigger": {
+                    "max": -1
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "function": "pipes:game/"
+  }
+}

@@ -1,0 +1,2 @@
+execute if data storage pipes:grid settings{record:true} run data modify storage pipes:grid dialog.body.contents[3] set value ["\n\n\n\n",{translate:"dialog.pipes.game.complete"},"  ",{translate:"dialog.pipes.game.time"},{color:"gold",text:""}," min ",{color:"gold",text:""},{color:"gold",text:"."},{color:"gold",text:""}," s"]
+execute if data storage pipes:grid settings{record:false} run data modify storage pipes:grid dialog.body.contents[3] set value ["\n\n\n\n",{translate:"dialog.pipes.game.complete"}]

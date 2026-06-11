@@ -1,0 +1,18 @@
+t = t_source  // t：节点，t_source：根节点
+visit t
+for n ∈ N do
+  push (t, t_n) to list  // t_n：t的邻居节点
+end for
+while list is not empty do
+  x = random(1, size of list)
+  (t_c, t_cn) = list[x]  // t_cn：t_c的邻居节点
+  if t_cn unvisited & t_c not t_shape then
+    connect(t_c, t_cn)
+    visit t_cn
+    for n ∈ N do
+      if t_cnn unvisited then  // t_cnn：t_cn的邻居节点
+        push (t_cn, t_cnn) to list
+      end if
+    end for
+  end if
+  erase t_c from list

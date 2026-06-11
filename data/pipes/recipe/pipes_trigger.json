@@ -1,0 +1,27 @@
+{
+  "key": {
+    "g": "minecraft:glass_pane",
+    "r": "minecraft:redstone_torch",
+    "w": "minecraft:water_bucket"
+  },
+  "pattern": [
+    "ggg",
+    "grg",
+    "gwg"
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_data": {
+        "id": "pipes:pipes_trigger"
+      },
+      "minecraft:item_name": {
+        "translate": "item.pipes.pipes_trigger"
+      },
+      "minecraft:item_model": "pipes:pipes_trigger",
+      "minecraft:rarity": "rare"
+    },
+    "count": 1,
+    "id": "minecraft:carrot_on_a_stick"
+  },
+  "type": "minecraft:crafting_shaped"
+}

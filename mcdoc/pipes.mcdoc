@@ -1,0 +1,97 @@
+use ::java::data::dialog::Dialog
+use ::java::util::text::Text
+
+dispatch minecraft:storage["pipes:grid"] to struct data{
+  cache?: struct{
+    display?: Text,
+    neighbour?: tile,
+    processing_data?: [
+      [tile]
+    ],
+    processing_data_cache?: [
+      [tile]
+    ],
+    processing_tile?: tile,
+    upset?: tile,
+    warn?: tile,
+    [any]: any
+  },
+  custom_menu?: Dialog,
+  DFS?: [
+    struct{
+      current_tile?: tile,
+      neighbour_tile?: [tile]
+    }
+  ],
+  dialog?: Dialog,
+  generate?: struct{
+    height?: int,
+    seed?: int,
+    width?: int
+  },
+  grid?: [
+    [tile]
+  ],
+  macro?: struct{
+    neighbour_x?: int,
+    neighbour_y?: int,
+    tile_index?: int,
+    tile_x?: int,
+    tile_y?: int,
+    warn_x?: int,
+    warn_y?: int
+  },
+  neighbour_tiles: [tile],
+  pop_tiles?: [tile],
+  record?: int[],
+  settings?: struct{
+    record?: boolean,
+    trigger?: boolean
+  },
+  stack?: [tile]
+}
+
+dispatch minecraft:storage["pipes:prim"] to struct prim{
+  alternative_side?: [alternative_side],
+  cache?: struct{
+    current?: alternative_side,
+    neighbour?: alternative_side,
+    tile_check: struct{
+      current?: tile,
+      neighbour?: tile
+    }
+  },
+  debug?: any,
+  macro?: struct{
+    down?: int,
+    left?: int,
+    length_of_alternative_side?: int,
+    neighbour_x?: int,
+    neighbour_y?: int,
+    random?: int,
+    right?: int,
+    up?: int,
+    x?: int,
+    y?: int
+  }
+}
+
+struct tile{
+  dfn?: int,
+  index?: int,
+  low?: int,
+  parent?: int,
+  parent_x?: int,
+  parent_y?: int,
+  side?: byte@0..1[] @ 4, // 依次为左、上、右、下四个方向，0为未连接，1为连接
+  source?: boolean,
+  state?: byte@0..3, // 0为无，1为灌水，2为警告，3为待访问
+  visited?: boolean,
+  x?: int,
+  y?: int
+}
+
+struct alternative_side{
+  side: byte@-1..1[] @ 2, // 左：[B;-1b,0b]，上：[B;0b,-1b]，右：[B;1b,0b]，下：[B;0b,1b]
+  tile: int[] @ 2
+}

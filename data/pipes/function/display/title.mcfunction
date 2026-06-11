@@ -1,0 +1,1 @@
+$execute if data storage pipes:grid dialog.title{translate:"dialog.pipes.game.title"} run data modify storage pipes:grid dialog.title set value {translate:"dialog.pipes.game.title",with:[{color:"gold",text:"$(width)"},{color:"gold",text:"$(height)"},{color:"gold",text:"$(seed)"}]}

@@ -1,0 +1,1 @@
+$execute store result score #neighbour_tile_low pipes.var run data get storage pipes:grid grid[][{index:$(index)}].low

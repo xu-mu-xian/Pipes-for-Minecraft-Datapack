@@ -1,0 +1,2 @@
+$data modify storage pipes:prim cache.tile_check.current set from storage pipes:grid grid[$(x)][$(y)]
+$data modify storage pipes:prim cache.tile_check.neighbour set from storage pipes:grid grid[$(neighbour_x)][$(neighbour_y)]

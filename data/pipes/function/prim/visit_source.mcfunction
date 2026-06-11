@@ -1,0 +1,1 @@
+$data modify storage pipes:grid grid[$(x)][$(y)] merge value {source:true,state:3b,visited:true}

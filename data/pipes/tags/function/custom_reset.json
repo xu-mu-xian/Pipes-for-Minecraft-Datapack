@@ -1,0 +1,9 @@
+{
+  "values": [
+    "pipes:custom/buttons/reset",
+    "pipes:custom/record/reset",
+    "pipes:custom/text_above/reset",
+    "pipes:custom/text_below/reset",
+    "pipes:custom/title/reset"
+  ]
+}

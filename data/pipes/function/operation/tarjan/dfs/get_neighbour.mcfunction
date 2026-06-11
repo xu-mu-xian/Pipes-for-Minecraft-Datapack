@@ -1,0 +1,1 @@
+$data modify storage pipes:grid DFS[-1].neighbour_tile[0] set from storage pipes:grid grid[][{index:$(index)}]

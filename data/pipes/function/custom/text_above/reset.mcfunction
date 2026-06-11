@@ -1,0 +1,1 @@
+data modify storage pipes:grid dialog.body.contents[1] set value ""

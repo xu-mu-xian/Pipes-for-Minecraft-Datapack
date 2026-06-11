@@ -1,0 +1,1 @@
+$data modify storage pipes:grid grid[$(x)][$(y)].state set value 2b

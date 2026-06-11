@@ -1,0 +1,3 @@
+scoreboard players operation @s pipes.var = @s pipes.trigger
+scoreboard players enable @s pipes.seed
+dialog show @s {actions:[{action:{template:"trigger pipes.seed set $(seed)",type:"minecraft:dynamic/run_command"},label:{translate:"dialog.pipes.custom.start_game"},width:100},{action:{command:"trigger pipes.trigger set 18",type:"minecraft:run_command"},label:{translate:"gui.cancel"},width:100}],inputs:[{key:"seed",label:{translate:"dialog.pipes.custom.seed"},type:"minecraft:text"}],after_action:"none",can_close_with_escape:false,pause:false,title:"",type:"minecraft:multi_action"}

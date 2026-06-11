@@ -1,0 +1,28 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "functions": [
+            {
+              "components": {
+                "minecraft:custom_data": {
+                  "id": "pipes:pipes_trigger"
+                },
+                "minecraft:item_name": {
+                  "translate": "item.pipes.pipes_trigger"
+                },
+                "minecraft:item_model": "pipes:pipes_trigger",
+                "minecraft:rarity": "rare"
+              },
+              "function": "minecraft:set_components"
+            }
+          ],
+          "name": "minecraft:carrot_on_a_stick",
+          "type": "minecraft:item"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}
