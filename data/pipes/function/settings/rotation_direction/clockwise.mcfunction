@@ -1,0 +1,1 @@
+data modify storage pipes:grid settings.rotation_direction set value "clockwise"

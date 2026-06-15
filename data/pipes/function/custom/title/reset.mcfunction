@@ -1,1 +1,1 @@
-data modify storage pipes:grid dialog.title set value {translate:"dialog.pipes.game.title"}
+data modify storage pipes:grid dialog.game.title set value {translate:"dialog.pipes.game.title"}

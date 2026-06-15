@@ -16,14 +16,17 @@ dispatch minecraft:storage["pipes:grid"] to struct data{
     warn?: tile,
     [any]: any
   },
-  custom_menu?: Dialog,
   DFS?: [
     struct{
       current_tile?: tile,
       neighbour_tile?: [tile]
     }
   ],
-  dialog?: Dialog,
+  dialog?: struct{
+    custom_menu?: Dialog,
+    game?: Dialog,
+    settings?: Dialog
+  },
   generate?: struct{
     height?: int,
     seed?: int,
@@ -41,14 +44,27 @@ dispatch minecraft:storage["pipes:grid"] to struct data{
     warn_x?: int,
     warn_y?: int
   },
-  neighbour_tiles: [tile],
   pop_tiles?: [tile],
-  record?: int[],
+  record?: struct{
+    is_true?: Text,
+    is_false?: Text,
+    timer?: int[],
+  },
   settings?: struct{
     record?: boolean,
+    rotation_direction?: enum(string){
+      clockwise = "clockwise",
+      counterclockwise = "counterclockwise"
+    },
     trigger?: boolean
   },
-  stack?: [tile]
+  stack?: [tile],
+  style?: struct{
+    flood?: #[id="font"] string,
+    normal?: #[id="font"] string,
+    source?: #[id="font"] string,
+    warning?: #[id="font"] string
+  },
 }
 
 dispatch minecraft:storage["pipes:prim"] to struct prim{
@@ -79,6 +95,7 @@ dispatch minecraft:storage["pipes:prim"] to struct prim{
 struct tile{
   dfn?: int,
   index?: int,
+  locked?: boolean,
   low?: int,
   parent?: int,
   parent_x?: int,

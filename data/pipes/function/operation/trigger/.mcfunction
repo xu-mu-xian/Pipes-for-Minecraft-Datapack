@@ -1,7 +1,9 @@
-#旋转管道
 advancement revoke @s only pipes:operation
+
+#旋转管道
 execute store result storage pipes:grid macro.tile_index int 1.0 run scoreboard players get @s pipes.operation
 function pipes:operation/trigger/tile with storage pipes:grid macro
+data remove storage pipes:grid cache.display
 scoreboard players reset @s pipes.operation
 scoreboard players enable @s pipes.operation
 

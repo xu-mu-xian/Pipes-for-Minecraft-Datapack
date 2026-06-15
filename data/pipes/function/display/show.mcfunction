@@ -1,1 +1,1 @@
-$dialog show @s $(dialog)
+$dialog show @s $(game)

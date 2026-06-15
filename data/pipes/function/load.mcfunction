@@ -15,5 +15,8 @@ scoreboard players set #60 pipes.constant 60
 scoreboard players set #100 pipes.constant 100
 scoreboard players set #1000 pipes.constant 1000
 
-execute unless data storage pipes:grid dialog run function pipes:init
+execute unless data storage pipes:grid dialog.game run function pipes:init
 execute if data storage pipes:grid settings{trigger:true} run scoreboard players enable @a pipes.trigger
+
+gamerule send_command_feedback false
+gamerule max_command_sequence_length 1000000

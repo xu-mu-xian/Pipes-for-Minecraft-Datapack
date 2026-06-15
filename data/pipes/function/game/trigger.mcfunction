@@ -16,7 +16,9 @@ execute if score @s pipes.trigger matches 15 run function pipes:generate/random 
 execute if score @s pipes.trigger matches 16 run function pipes:generate/random {w:16,h:16}
 execute if score @s pipes.trigger matches 17 run function pipes:game/replay with storage pipes:grid generate
 execute if score @s pipes.trigger matches 18 run function pipes:game/custom/
+execute if score @s pipes.trigger matches 19 run function pipes:game/lock/
+execute if score @s pipes.trigger matches 20 run function pipes:game/lock/quit
+execute if score @s pipes.trigger matches 21 run function pipes:game/settings/
 execute if score @s pipes.trigger matches 33..2727 run function pipes:game/custom/random/
 execute if score @s pipes.trigger matches -2727..-33 run function pipes:game/custom/seed/
-execute if score @s pipes.trigger matches 99990 run function pipes:settings/record/false
-execute if score @s pipes.trigger matches 99991 run function pipes:settings/record/true
+execute if score @s pipes.trigger matches 99900.. run function pipes:settings/

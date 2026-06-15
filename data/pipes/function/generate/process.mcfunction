@@ -1,3 +1,6 @@
+#初始化
+function pipes:generate/init
+
 #生成地图
 function pipes:prim/
 
@@ -11,5 +14,4 @@ function pipes:operation/tarjan/
 function pipes:display/
 
 #计算时间
-tag @s remove pipes.quit
 execute if data storage pipes:grid settings{record: true} run scoreboard players set @s pipes.timer 0

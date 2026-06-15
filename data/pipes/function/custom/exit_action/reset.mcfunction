@@ -1,0 +1,1 @@
+data modify storage pipes:grid dialog.game.exit_action set value {action:{command:"trigger pipes.trigger set 1",type:"minecraft:run_command"},label:{translate:"gui.back"}}

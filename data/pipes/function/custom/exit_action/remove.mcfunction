@@ -1,0 +1,1 @@
+data remove storage pipes:grid dialog.game.exit_action

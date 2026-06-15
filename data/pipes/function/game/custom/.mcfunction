@@ -1,4 +1,4 @@
-data modify storage pipes:grid custom_menu set value \
+data modify storage pipes:grid dialog.custom_menu set value \
 {\
   actions:[\
     {action:{template:"trigger pipes.trigger set $(width)$(height)",type:"minecraft:dynamic/run_command"},label:{translate:"dialog.pipes.custom.start_directly"},width:100},\
@@ -15,7 +15,7 @@ data modify storage pipes:grid custom_menu set value \
   title:{translate:"dialog.pipes.main.custom"},\
   type:"minecraft:multi_action"\
 }
-execute if data storage pipes:grid generate.width run data modify storage pipes:grid custom_menu.inputs[0].initial set from storage pipes:grid generate.width
-execute if data storage pipes:grid generate.height run data modify storage pipes:grid custom_menu.inputs[1].initial set from storage pipes:grid generate.height
-function pipes:game/custom/menu with storage pipes:grid
+execute if data storage pipes:grid generate.width run data modify storage pipes:grid dialog.custom_menu.inputs[0].initial set from storage pipes:grid generate.width
+execute if data storage pipes:grid generate.height run data modify storage pipes:grid dialog.custom_menu.inputs[1].initial set from storage pipes:grid generate.height
+function pipes:game/custom/menu with storage pipes:grid dialog
 scoreboard players reset @s pipes.seed

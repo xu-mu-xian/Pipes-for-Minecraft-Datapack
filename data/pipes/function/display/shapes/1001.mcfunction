@@ -1,0 +1,2 @@
+data modify storage pipes:grid cache.display set value {click_event:{action:"run_command",command:"trigger pipes.operation set -1"},font:"pipes:tube",text:"j"}
+execute if data storage pipes:grid cache.processing_tile{locked:true} run data modify storage pipes:grid cache.display.text set value "J"
