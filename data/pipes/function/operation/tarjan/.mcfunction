@@ -26,5 +26,5 @@ scoreboard players operation #total pipes.var = #width pipes.var
 scoreboard players operation #total pipes.var *= #height pipes.var
 scoreboard players operation #flood_tiles_count pipes.var = #dfn_counter pipes.var
 scoreboard players operation #flood_tiles_count pipes.var -= #warn_tiles_count pipes.var
-execute unless score #total pipes.var = #flood_tiles_count pipes.var run return run tag @s remove pipes.win
+execute unless score #total pipes.var = #flood_tiles_count pipes.var run return fail
 tag @s add pipes.win
