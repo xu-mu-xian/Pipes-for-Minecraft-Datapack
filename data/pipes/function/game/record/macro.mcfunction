@@ -1,0 +1,1 @@
+$data modify storage pipes:grid dialog.record.body.contents append value {translate:"dialog.pipes.record.contents",with:["§c$(width)","§c$(height)","§6$(win)","§6$(total)","§6$(timer_min)","§6$(timer_s)","§6$(timer_ms)","§6$(steps)"]}

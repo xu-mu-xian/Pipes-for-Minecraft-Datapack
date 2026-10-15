@@ -1,0 +1,5 @@
+data modify storage pipes:grid dialog.record set value {actions:[{action:{command:"trigger pipes.trigger set 1",type:"minecraft:run_command"},label:{translate:"gui.back"}},{action:{command:"trigger pipes.trigger set 24",type:"minecraft:run_command"},label:{translate:"dialog.pipes.record.reset"}}],after_action:"none",body:{contents:["",{translate:"dialog.pipes.record.header"},"\n\n"],type:"minecraft:plain_message",width:400},pause:false,title:{translate:"dialog.pipes.main.record"},type:"minecraft:multi_action"}
+execute store result score #length_of_record_data pipes.var run data get storage pipes:grid record.data
+execute if score #length_of_record_data pipes.var matches 0 run data modify storage pipes:grid dialog.record.body.contents append value [{translate:"advancements.empty"}]
+execute unless score #length_of_record_data pipes.var matches 0 run function pipes:game/record/data
+function pipes:game/record/menu with storage pipes:grid dialog

@@ -1,5 +1,8 @@
 advancement revoke @s only pipes:operation
 
+#增加操作次数
+execute unless entity @s[tag=pipes.win] run scoreboard players add @s pipes.steps 1
+
 #旋转管道
 execute store result storage pipes:grid macro.tile_index int 1.0 run scoreboard players get @s pipes.operation
 function pipes:operation/trigger/tile with storage pipes:grid macro

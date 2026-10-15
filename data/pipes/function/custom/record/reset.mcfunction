@@ -1,2 +1,3 @@
-data modify storage pipes:grid record.is_true set value {translate:"dialog.pipes.game.time",with:[{color:"gold",text:""},{color:"gold",text:""},{color:"gold",text:""}]}
+data modify storage pipes:grid record.is_true set value ["",{translate:"dialog.pipes.game.complete"},"  ",{translate:"dialog.pipes.game.record",with:[{color:"gold",text:""},{color:"gold",text:""},{color:"gold",text:""},{color:"gold",text:""}]}]
 data modify storage pipes:grid record.is_false set value {translate:"dialog.pipes.game.complete"}
+data modify storage pipes:grid record.new_record set value {bold:true,color:"red",translate:"dialog.pipes.game.new_record"}

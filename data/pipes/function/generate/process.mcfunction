@@ -15,3 +15,6 @@ function pipes:display/
 
 #计算时间
 execute if data storage pipes:grid settings{record: true} run scoreboard players set @s pipes.timer 0
+
+#游戏次数计数
+function pipes:record/total

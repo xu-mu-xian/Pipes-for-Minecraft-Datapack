@@ -1,0 +1,1 @@
+$return run scoreboard players get #$(char) pipes.base64_char

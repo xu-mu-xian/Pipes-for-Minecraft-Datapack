@@ -2,6 +2,8 @@ scoreboard players enable @s pipes.operation
 
 #生成特定大小的方格
 function pipes:grid/
+execute store result storage pipes:grid record.width int 1.0 run scoreboard players get #width pipes.var
+execute store result storage pipes:grid record.height int 1.0 run scoreboard players get #height pipes.var
 
 #创建候选边列表
 data modify storage pipes:prim alternative_side set value []

@@ -2,6 +2,13 @@ use ::java::data::dialog::Dialog
 use ::java::util::text::Text
 
 dispatch minecraft:storage["pipes:grid"] to struct data{
+  base64?: struct{
+    input?: struct{
+      char?: string,
+      content?: string
+    },
+    output?: byte[]
+  },
   cache?: struct{
     display?: Text,
     neighbour?: tile,
@@ -12,9 +19,19 @@ dispatch minecraft:storage["pipes:grid"] to struct data{
       [tile]
     ],
     processing_tile?: tile,
+    record?: record,
     upset?: tile,
     warn?: tile,
     [any]: any
+  },
+  daily?: struct{
+    h?: int,
+    timestamp?: struct{
+      total_day?: int,
+      total_s?: int
+    },
+    seed?: int,
+    w?: int
   },
   DFS?: [
     struct{
@@ -25,6 +42,7 @@ dispatch minecraft:storage["pipes:grid"] to struct data{
   dialog?: struct{
     custom_menu?: Dialog,
     game?: Dialog,
+    record?: Dialog,
     settings?: Dialog
   },
   generate?: struct{
@@ -46,9 +64,15 @@ dispatch minecraft:storage["pipes:grid"] to struct data{
   },
   pop_tiles?: [tile],
   record?: struct{
+    data?: [record],
+    height?: int,
     is_true?: Text,
     is_false?: Text,
+    new_record?: Text,
+    steps?: int,
     timer?: int[],
+    total?: int,
+    width?: int
   },
   settings?: struct{
     record?: boolean,
@@ -64,7 +88,7 @@ dispatch minecraft:storage["pipes:grid"] to struct data{
     normal?: #[id="font"] string,
     source?: #[id="font"] string,
     warning?: #[id="font"] string
-  },
+  }
 }
 
 dispatch minecraft:storage["pipes:prim"] to struct prim{
@@ -111,4 +135,16 @@ struct tile{
 struct alternative_side{
   side: byte@-1..1[] @ 2, // 左：[B;-1b,0b]，上：[B;0b,-1b]，右：[B;1b,0b]，下：[B;0b,1b]
   tile: int[] @ 2
+}
+
+struct record{
+  height?: int,
+  steps?: int,
+  timer?: int,
+  timer_min?: int,
+  timer_ms?: int,
+  timer_s?: int,
+  total?: int,
+  width?: int,
+  win?: int
 }

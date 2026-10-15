@@ -1,0 +1,1 @@
+$data modify storage pipes:grid dialog.record.body.contents append value {translate:"dialog.pipes.record.contents",with:["§c$(width)","§c$(height)","§60","§6$(total)","-","-","-","-"]}
